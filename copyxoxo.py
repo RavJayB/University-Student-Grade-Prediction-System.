@@ -4,17 +4,11 @@ module_trailer = 0
 module_retriever = 0
 exclude_out = 0
 
-# histogram = {'progress': [], 'trailer': [], 'exclude': [], 'retriever': []}
+#histogram = {'progress': [], 'trailer': [], 'exclude': [], 'retriever': []}
 proval = []
 trialval = []
 exc_val = []
 retval = []
-
-
-def op_three():
-    stuff()
-    text_f()
-
 
 def text_f():
     f = open('test.txt', 'w')  # Write
@@ -39,6 +33,7 @@ def text_f():
     f.close()
 
 
+
 def repeat_ag():  # Code repeat function
     while True:
         try:
@@ -52,7 +47,6 @@ def repeat_ag():  # Code repeat function
                 print("quit selected\n")
                 hor_histogram()
                 ver_histogram()
-                # text_f()
                 list_tu()
                 break
             else:
@@ -127,7 +121,7 @@ def stuff_ch(value_1, value_2, value_3):
 
     if (value_1 == 0 and value_2 <= 40) or (value_1 == 20 and value_2 <= 20) or (value_1 == 40 and value_2 == 0):
         print("Exclude")
-        # histogram['exclude'] += [value_1, value_2, value_3]
+        #histogram['exclude'] += [value_1, value_2, value_3]
         exc_val.append(value_1)
         exc_val.append(value_2)
         exc_val.append(value_3)
@@ -136,7 +130,7 @@ def stuff_ch(value_1, value_2, value_3):
     elif (value_1 == 0 and value_2 >= 60) or (value_1 == 20 and value_2 >= 40) or (value_1 == 40 and value_2 != 0) or (
             value_1 == 60) or (value_1 == 80):
         print("Do not progress – module retriever")
-        # histogram['retriever'] += [value_1, value_2, value_3]
+        #histogram['retriever'] += [value_1, value_2, value_3]
         retval.append(value_1)
         retval.append(value_2)
         retval.append(value_3)
@@ -144,7 +138,7 @@ def stuff_ch(value_1, value_2, value_3):
 
     elif value_1 == 100:
         print("Progress (module trailer) \n")
-        # histogram['trailer'] += [value_1, value_2, value_3]
+        #histogram['trailer'] += [value_1, value_2, value_3]
         trialval.append(value_1)
         trialval.append(value_2)
         trialval.append(value_3)
@@ -152,7 +146,7 @@ def stuff_ch(value_1, value_2, value_3):
 
     elif value_1 == 120:
         print("Progress \n")
-        # histogram['progress'] += [value_1, value_2, value_3]
+        #histogram['progress'] += [value_1, value_2, value_3]
         proval.append(value_1)  # appending pass,defer,fail values for empty string
         proval.append(value_2)
         proval.append(value_3)
@@ -197,7 +191,7 @@ def u_interface():
             print("Stuff version selected.\n")
             stuff()
         elif choose == 3:
-            op_three()
+            text_f()
             print()
         else:
             print("Quit selected.")
